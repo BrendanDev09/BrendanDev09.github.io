@@ -1,0 +1,287 @@
+/* General */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #000;
+  color: #fff;
+}
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2.2rem;
+  color: #f4b400;
+}
+
+/* Navbar */
+header {
+  background: #111;
+  padding: 15px 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  color: #f4b400;
+  font-size: 1.5rem;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: #f4b400;
+}
+#theme-toggle {
+  background: none;
+  border: none;
+  color: #f4b400;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* Hero */
+.hero {
+  height: 180vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: url('./images/shawarma1.jpeg') no-repeat center/cover;
+}
+/*profile photo*/
+.profile-pic{
+    width: 180px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: unset;
+    margin-bottom: 20px;
+    border: 3px solid #f4b400;
+    box-shadow: 0 0 20px #f4b400, 0 0 40px rgba(244, 180, 0, 0, 6);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+.profile-pic:hover{
+    transform: scale(1.05s);
+    box-shadow: 0 0 30px #f4b400,  0 0 60px rgb(244, 180, 0, 0, 8)
+}
+/*ABOUT CONTAINER*/
+.about-container{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 100%;
+    font-style: italic;
+}
+.hero h2 {
+  font-size: 3rem;
+  line-height: 1.2;
+}
+
+.hero span {
+  color: #f4b400;
+}
+h3{
+  text-align: center;
+  position:relative;
+}
+p{
+  margin: 10px;
+  padding: 10px;
+}
+p mark{
+  font-weight: 50px;
+  border-radius: 25px;
+  background-color: #111;
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+}
+.btn-yellow {
+  display: flexbox;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #f4b400;
+  color: #000;
+  text-decoration: none;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+.btn-yellow:hover {
+  background: #fff;
+}
+
+.btn-dark{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #f4b400;
+    color: #000;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+.btn-dark:hover{
+     background: #fff;
+}
+
+#resume{
+  text-align: center;
+  justify-content: center;
+  text-decoration: initial;
+  font-style: italic;
+  font-size: 140%;
+}
+/* Sections */
+section {
+  padding: 80px 20px;
+}
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Skills */
+.skill {
+  margin: 15px 0;
+}
+.skill-bar {
+  background: #333;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.skill-bar span {
+  display: block;
+  height: 10px;
+  background: #f4b400;
+}
+
+/* Card Containers */
+.card-container,
+.contact-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.service-card,
+.project-card,
+.blog-card,
+.contact-card {
+  background: #111;
+  color: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  transition: all 0.4s ease;
+  opacity: 1;
+  transform: translateY(30px);
+}
+.service-card i,
+.contact-card i {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #f4b400;
+  transition: color 0.3s ease;
+}
+.service-card:hover,
+.project-card:hover,
+.blog-card:hover,
+.contact-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  background: #f4b400;
+  color: #111;
+  box-shadow: 0 0 15px #f4b400, 0 0 30px #f4b400;
+}
+.service-card:hover i,
+.contact-card:hover i {
+  color: #111;
+}
+.service-card.show,
+.project-card.show,
+.blog-card.show,
+.contact-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Contact Form */
+form {
+  max-width: 500px;
+  margin: auto;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+form input,
+form textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 7px;
+}
+form button {
+  border: none;
+  cursor: pointer;
+}
+
+/* Back to Top */
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #f4b400;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  display: none;
+  cursor: pointer;
+}
+
+/* Dark/Light Mode */
+body.light {
+  background: #fff;
+  color: #111;
+}
+body.light header {
+  background: #eee;
+}
+body.light .logo,
+body.light h2 {
+  color: #f4b400;
+}
+body.light .nav-links li a {
+  color: #111;
+}
+body.light .nav-links li a:hover,
+body.light .nav-links li a.active {
+  color: #f4b400;
+}
