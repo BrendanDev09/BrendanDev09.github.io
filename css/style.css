@@ -51,8 +51,66 @@ header {
   font-size: 22px;
   color: #f5a623;
 }
+css
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: #111;
+  color: #fff;
+  position: relative;
+}
 
+.logo {
+  font-weight: bold;
+  font-size: 22px;
+  color: #f5a623;
+}
 
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.menu-toggle {
+  font-size: 26px;
+  display: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: #111;
+    z-index: 999;
+  }
+
+  nav ul {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  nav.active {
+    display: block;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
 
  
 .nav-links {
@@ -349,6 +407,7 @@ body.light .nav-links li a.active {
   }
   
 }
+
 
 
 
