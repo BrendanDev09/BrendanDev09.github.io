@@ -64,9 +64,19 @@ backToTop.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
+
+js
+const menuToggle = document.querySelector('.menu-toggle');
+const nav = document.querySelector('nav');
+
+menuToggle.addEventListener('click', () => {
+  nav.classList.toggle('active');
+});
+
 // Dark/Light Mode
 const themeToggle = document.getElementById("theme-toggle");
 themeToggle.addEventListener("click", () => {
   document.body.classList.toggle("light");
   themeToggle.textContent = document.body.classList.contains("light") ? "☀️" : "🌙";
+
 });
