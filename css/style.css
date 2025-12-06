@@ -69,8 +69,8 @@ header {
 }
 /*profile photo*/
 .profile-pic{
-    width: 180px;
-    height: 100px;
+     max-width: 100%;
+    height: auto;
     border-radius: 50%;
     object-fit: unset;
     margin-bottom: 20px;
@@ -284,4 +284,15 @@ body.light .nav-links li a {
 body.light .nav-links li a:hover,
 body.light .nav-links li a.active {
   color: #f4b400;
+
+}
+
+@media  ( max-width:768px){
+   .service-card,
+.project-card,
+.blog-card,
+.contact-card {
+  display: flex;
+  padding: 10px;
+}
 }
