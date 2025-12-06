@@ -35,6 +35,11 @@ header {
   color: #f4b400;
   font-size: 1.5rem;
 }
+  nav ul{
+      display: flex;
+    overflow-x:auto;
+    white-space:nowrap;
+    }
 .nav-links {
   list-style: none;
   display: flex;
@@ -332,6 +337,7 @@ body.light .nav-links li a.active {
   }
   
 }
+
 
 
 
