@@ -51,32 +51,3 @@ window.addEventListener("scroll", () => {
   });
 });
 
-// Back to Top
-const backToTop = document.getElementById("backToTop");
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 300) {
-    backToTop.style.display = "block";
-  } else {
-    backToTop.style.display = "none";
-  }
-});
-backToTop.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-});
-
-
-js
-const menuToggle = document.querySelector('.menu-toggle');
-const nav = document.querySelector('nav');
-
-menuToggle.addEventListener('click', () => {
-  nav.classList.toggle('active');
-});
-
-// Dark/Light Mode
-const themeToggle = document.getElementById("theme-toggle");
-themeToggle.addEventListener("click", () => {
-  document.body.classList.toggle("light");
-  themeToggle.textContent = document.body.classList.contains("light") ? "☀️" : "🌙";
-
-});
