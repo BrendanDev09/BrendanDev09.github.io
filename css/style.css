@@ -194,6 +194,17 @@ section h2{
   flex-wrap: wrap;
   justify-content: center;
   margin-top:20px;
+  flex:1 1 300px;
+  box-sizing: border-box;
+}
+.card-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top:20px;
+  flex:1 1 300px;
+  box-sizing: border-box;
 }
 .service-card,
 .project-card,
@@ -243,6 +254,10 @@ section h2{
 .contact-card.show {
   opacity: 1;
   transform: translateY(0);
+}
+.card-container{
+  width:90%
+  max-width:90%;
 }
 
 /* Contact Form */
@@ -306,10 +321,11 @@ body.light .nav-links li a.active {
     align-item:center;
 }
     .card-container{
-      width:90%;
+      width:100%;
     }
   nav ul li a{
       font-size:16px;
   }
 }
+
 
