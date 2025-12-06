@@ -203,7 +203,7 @@ section h2{
   flex-wrap: wrap;
   justify-content: center;
   margin-top:20px;
-  flex:1 1 300px;
+  flex:1 1 280px;
   box-sizing: border-box;
 }
 .service-card,
@@ -327,5 +327,6 @@ body.light .nav-links li a.active {
       font-size:16px;
   }
 }
+
 
 
