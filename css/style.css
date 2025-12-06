@@ -323,10 +323,16 @@ body.light .nav-links li a.active {
     .card-container{
       width:100%;
     }
+    nav ul{
+      flex-direction:column;
+        align-item:flex-start;
+    }
   nav ul li a{
       font-size:12px;
   }
+  
 }
+
 
 
 
